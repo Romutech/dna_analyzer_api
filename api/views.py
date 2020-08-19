@@ -3,6 +3,6 @@ from .serializers import SequenceSerializer
 from .models import Sequence
 
 
-class HeroViewSet(viewsets.ModelViewSet):
+class SequenceViewSet(viewsets.ModelViewSet):
     queryset = Sequence.objects.all().order_by('title')
     serializer_class = SequenceSerializer
