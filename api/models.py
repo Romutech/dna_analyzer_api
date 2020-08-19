@@ -20,3 +20,5 @@ class Sequence(models.Model):
     percentage_gc        = models.DecimalField(null=True, decimal_places=2, max_digits=5)
     percentage_at        = models.DecimalField(null=True, decimal_places=2, max_digits=5)
     date                 = models.DateField(default=timezone.now, verbose_name="Date de création")
+
+    
