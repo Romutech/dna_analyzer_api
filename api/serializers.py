@@ -5,10 +5,11 @@ class SequenceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Sequence
         fields = (
-            "id",
+            "uuid",
             "user_id",
+            "file_path",
             "title",
-            "sequence",
+            "file",
             "note",
             "nb_bases",
             "nb_a",
