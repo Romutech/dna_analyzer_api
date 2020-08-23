@@ -22,4 +22,6 @@ class SequenceSerializer(serializers.HyperlinkedModelSerializer):
             "percentage_t",
             "percentage_gc",
             "percentage_at",
+            "dna_walk_graph_data",
+            "ratio_g_c_graph_data",
         )
