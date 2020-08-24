@@ -25,7 +25,10 @@ SECRET_KEY = 'ig_r@xdn_tuw((lt#fsut_*&#db^8#0ts64qo2_q*dp2gc6fzx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+DEBUG = True
+ALLOWED_HOSTS = ['*']
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 APPEND_SLASH=False
 
@@ -76,13 +79,24 @@ WSGI_APPLICATION = 'dna_analyzer_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd3vupnph056pu1',
+        'USER': 'tlnfzdxhydmkkz',
+        'PASSWORD': '70cb14e4b3b56faf0e6c4985238770dec51da6b129fa67546ed7be8c01a0eea6',
+        'HOST': 'ec2-52-208-175-161.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
+        'DATABASE': 'da3e5461a9ofmi',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -106,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr'
 
 TIME_ZONE = 'UTC'
 
