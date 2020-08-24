@@ -3,7 +3,7 @@ from django.utils import timezone
 import uuid
 
 class Sequence(models.Model):
-    uuid                 = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    uuid                 = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, null=False)
     user_id              = models.IntegerField(null=False)
     file_path            = models.CharField(max_length=100, null=True)
     title                = models.CharField(max_length=100, null=False)

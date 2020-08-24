@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'ig_r@xdn_tuw((lt#fsut_*&#db^8#0ts64qo2_q*dp2gc6fzx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 
 DEBUG = True
 ALLOWED_HOSTS = ['*']
@@ -89,12 +89,11 @@ WSGI_APPLICATION = 'dna_analyzer_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd3vupnph056pu1',
+        'NAME': 'da3e5461a9ofmi',
         'USER': 'tlnfzdxhydmkkz',
         'PASSWORD': '70cb14e4b3b56faf0e6c4985238770dec51da6b129fa67546ed7be8c01a0eea6',
         'HOST': 'ec2-52-208-175-161.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
-        'DATABASE': 'da3e5461a9ofmi',
     }
 }
 
@@ -133,5 +132,3 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_URL = '/static/'
